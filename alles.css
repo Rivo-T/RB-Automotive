@@ -1,0 +1,779 @@
+
+html{   /*html*/
+    scroll-behavior: smooth;
+}
+
+.header{    /*header*/
+
+    width:100%;
+    height:130px;
+    text-align:center;
+    justify-content: center;
+    display: flex;
+    padding-top: 0px;
+
+}
+.header img{ /*foto van de header (logo)*/
+
+    height: 110%;
+    
+}
+
+.container1{    /*div van de banner (waar de banner in staat), makkelijker met verplaatsen/indelen */
+    width: 100%;
+    height: 65vh;
+    
+}
+.banner{ /*De banner div zelf, met als achtergrond dus de banner om het onzelf iets makkelijker te maken (inzichtelijker)*/
+    width: 100%;
+    height: 95%;
+    background-image: url(images/porschebanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10x;
+    margin-top: 80px;
+    }
+
+body{ /*algemene body tag*/
+    width: 100%;
+    height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/white_porsche_car-wallpaper-1920x1200.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+ }
+
+
+h3{     /*algemene h3 tag*/
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+a{  /* algeme a is de (anchor) tag (met het linkje)*/
+    text-decoration: none;
+    }
+
+
+.gallery{ /*gallery bevat de 3 'omschrijvingen' van het bedrijf*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.content{ /*aparte 'vakjes' waarin elk een andere afbeelding en tekst bij staat, hier zijn er 3 van*/
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: .4s;
+    background: white;
+}
+
+.content:hover{ /*Als je over de content heen 'hovered', verplaatst hij iets omhoog, incl een schaduw*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -20px);
+}
+
+.content img{ /*de images van de omschrijvingen van het bedrijf*/
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+p{ /*Algemen paragraaf tag*/
+    text-align: center;
+    color: #7c7c7c;
+    padding-top: 0 8px;
+}
+
+h6{ /*Algemene h6 tag*/
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+}
+
+button{ /*algemene button tag*/
+    text-align: center;
+    font-size: 24px;
+    color: #3f3f3f;
+    width: 100%;
+    padding:15px ;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/*Bovenste Navbar*/
+.navbar ul{ /*bovenste navbar*/
+    font-size: 1.30rem;       /*Rem is meeteenheid voor lettergroottes (makkelijker om dit zo consistent te doen)*/
+    justify-content: center;
+    list-style-type: none;
+    background-color: hsl(0, 0, 0%);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+}
+.navbar a{ /*navbar anchor tag*/
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsla(0, 0%, 16%, 0.178)
+}
+.navbar li{
+    float: left;
+}
+.dropdown { /*Stijl voor dropdown*/
+    position: relative;
+    display: inline-block;
+  }
+      
+  .dropdown-content { /*Stijl voor dropdown content*/
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.171);
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.363);
+    border-radius: 0px 0px 20px 20px;
+    border: 5px rgba(255, 255, 255, 0.664)
+  }
+  
+  .dropdown-content a { /*Stijl voor dropdown content links*/
+    padding: 10px;
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.25s ease;
+  }
+  
+  .dropdown-content:hover a:hover { /*Stijl voor dropdown content en hover links*/
+    color: rgb(92, 90, 90);
+  }
+    
+  .dropdown:hover .dropdown-content { /*Stijl voor dropdown*/
+      display: block;  
+    }
+  
+  .search { /*stijl voor searchbar*/
+    display: flex;
+    height: 30px;
+    width: 100px;
+    transition-duration: 0.5s;
+  }
+  
+  .search:hover { /*Hover effect bij de searchbar*/
+    display: flex;
+    width: 200px;
+  }
+
+/*Reviews:*/
+#reviews{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.reviews{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.reviews-header{
+    display: flex;
+    letter-spacing: 1px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.reviews-header h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+.reviews-header span{
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.review-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.review-box{
+    transition: .6s;
+    width: 500px;
+    box-shadow: 2px 2px 31px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.review-box:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -15px);
+}
+.profile-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.name-review{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-review strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-review span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews-geheel{
+    color: #a81b1b;
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-reactie p{
+    font-size: 0.9rem;
+    color: #3d3d3d;
+}
+
+/*Over ons sectie (about us)*/
+.about-us-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.about-us-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-us-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    color: #2b2b2b;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+
+.contact-button {
+    width: 14%;
+    border-radius: 12px;
+    justify-content: center;
+   display: block;
+  margin: auto;
+    padding: 14px;
+    background-color: #a81b1b;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.contact-button:hover {
+    background-color: #7a0901;
+}
+
+.about-us-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*De footer (onderaan de pagina)*/
+.footer{
+    background-color: #24262b;
+    box-sizing: border-box;
+    padding: 70px 0;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+.footercontainer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.containerrij{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer-column{
+    width: 22%;
+    padding: 0 15px
+}
+.footer-column h4{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-column h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #a81b1b;
+    height: 2px;
+    box-sizing: border-box;
+    width: 52px;
+}
+.footer-column ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-column ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: rgb(238, 238, 238);
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover{
+    color: #b92121;
+    padding-bottom: 1px;
+    padding-left: 8px;
+}
+.footer-column .socialmedia-links a{
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color:rgba(255,255,255,0.2);
+    margin-right:0 10px 10px 0;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.51s ease;
+}
+.footer-column .socialmedia-links a:hover{
+    color: #ffffff;
+    background-color: #a81b1b;
+}
+/*Copyright stuk*/
+.copyright{
+    color: white;
+    cursor: pointer;
+    transition: all 1s ease;
+    
+}
+.copyright:hover{
+    color: #a81b1b;
+}
+.copyright{
+    text-align: center;
+}
+
+/*!!!!!
+Hieronder beginnen de css codes van de modellen
+!!!!!*/
+
+/*Hieronder staat alles van de 'hokjes' en images zelf waarin de auto's staan */
+
+.models button{
+    color: black;
+}
+.gallery a{
+    text-decoration: none;
+    }
+.models h3{
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+
+.models p{
+        text-align: center;
+        color: #b2bec3;
+        padding-top: 0 8px;
+ }
+    
+.models h6{
+        font-size: 26px;
+        text-align: center;
+        color: #222f3e;
+        margin: 0;
+}
+    
+/*Dit is de tweede navbar waarin de merken staan waarop je ook kan klikken*/
+.navbar2 ul{ /*bovenste navbar*/
+    font-size: 1.30rem;
+    justify-content: center;
+    list-style-type: none;
+    background-color: hsl(0, 0, 0%);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+}
+.navbar2 a{ /*navbar anchor tag*/
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar2 a:hover{
+    background-color: hsla(0, 0%, 16%, 0.178)
+}
+.navbar2 li{
+    float: left;
+}
+
+
+/*hieronder staat de code van de prodcuctpagina*/
+
+body.productpagina{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.productpagina p{
+    color: black;
+    text-align: left;
+}
+body.productpagina img{
+    width: 90%;
+}
+
+.main-wrapper img{
+    width: 100%;
+    display: block;
+}
+.main-wrapper{   /*algemene wrapper*/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container3{ /*container 3*/
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.product-div{
+    margin: 1rem 0; /*Rem is afmeting tot de 'basisgrootte' van de letter*/
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grid lay-out met 2 gelijke kolommen */
+    background-color: white;
+    border-radius: 8px;
+    column-gap: 10px;
+}
+.product-div-left{ 
+    padding: 20px;
+}
+.product-div-right{
+    padding: 20px;
+}
+.img-container img{
+    width: 200px;
+    margin: 0 auto;
+}
+.hover-container{   
+    display: flex;
+   flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+.hover-container div{
+    border: 2px solid rgba(252, 160, 175, 0.7);
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active{
+    border-color: rgba(255, 145, 163); /*voor js*/
+}
+.hover-container div:hover{
+    border-color: rgba(255, 145, 163); /*voor js*/
+    transition: all ease 0.5s;
+}
+.hover-container div img{
+    width: 50px;
+    cursor: pointer;
+}
+.product-div-right span{
+display: block;
+}
+.product-name{
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+.product-price{
+    font-weight: 700;
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.product-rating{ /*sterren rating*/
+    color: #a81b1b;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-raing span{
+    margin-right: 6px;
+}
+.product-desciption{
+    font-weight: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 22px;
+}
+
+.button-groups{ /*knoppen*/
+    margin-top: 22px;
+}
+.button-groups button{
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button-groups button .fas{
+    margin-right: 8px;
+}
+.aanvragen-button{
+    border-radius: 12px;
+    width: 40%;
+    background-color: #a81b1b;
+    border: 2px solid #a81b1b;
+    margin-right: 8px;
+}
+a{
+    color: black;
+}
+.aanvragen-button:hover{
+    background-color: #fff;
+    color: #a81b1b;
+    transition: all ease 0.4s;
+}
+
+/*voor css script*/
+@media screen and (max-width: 992px){
+    .product-div{
+        grid-template-columns: 100%;
+    }
+    .product-div-right{
+        text-align: center;
+    }
+    .product-rating{
+        justify-content: center;
+    }
+    .product-desciption{
+        max-width: 400;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .button-groups button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/*Codes samen met boaz gevoegd omdat ik geen github kon gebruiken (overlegd met docent)*/
+
+.inputtext, .select { /*maakt de textboxes aan*/
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing:content-box;
+    margin: 10px;
+    justify-content: center;
+    display: block;
+    height: 20px;
+    transition: height 0.65s, filter 0.5s;
+    filter: drop-shadow(7.5px 5px 5px #00000031);
+  }
+  
+  
+  .inputtext:hover, .select:hover { /*effect wanneer je hovert*/
+    height: calc(20px * 1.55);
+    filter: drop-shadow(7.5px 5px 5px #706666da);
+  }
+  
+  .textarea:hover { /*effect wanneer je hovert ALLEEN TEXTAREA*/
+      height: calc(150 * 1.5);
+  }
+  
+  .textarea { /*stijl voor groot textvlak (message us)*/
+    width: 98%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 27px;
+    box-sizing:border-box;
+    margin: 10px;
+    transition-duration: height 0.65s;
+    max-width: 98.5%;
+    min-width: 98.5%;
+    min-height: 150px;
+  }
+  
+  select { /*extra stijl voor select, zodat kleur en grootte even groot zijn als de rest van de textboxen*/
+    color:#6e6d6d;
+    font-size: 13px;
+    width: 95%;
+  }
+  
+  
+  .card { /*grote box card met alle textboxen er in*/
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    max-width: 100%;
+    filter: drop-shadow(15px 10px 10px #00000098);
+  }
+  
+  input[type=submit] { /*submit button*/
+    margin: auto;
+    display: block;
+    border-radius: 15px;
+    background: #a81b1b;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-color: 1px solid #ccc;
+    transition: width 1.2s, height 1.2s;
+  }
+  
+  input[type=submit]:hover { /*submit hover effect met transitions*/
+    filter: hue-rotate(-1.0turn);
+    height: calc(50px * 1.2);
+    font-size: 2rem;
+    text-decoration:solid;
+    width: calc(200px * 1.2);
+    transition: all 2s;
+  }
+  
+  .thanks{
+    text-align: center;
+    font-size: 45px;
+  }
+
+    
